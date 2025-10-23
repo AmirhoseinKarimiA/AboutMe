@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+}
+
+header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.header-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.language-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.language-btn:active {
+    transform: translateY(0);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 30px;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-content {
+    padding: 10px 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+}
+
+.contact-info {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+    direction: ltr;
+    justify-content: flex-start;
+}
+
+.contact-info li:hover {
+    transform: translateX(-5px);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498db;
+    min-width: 20px;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.experience-item, .education-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover {
+    background-color: #f8f9fa;
+}
+
+.date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.name-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.name-link:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name-link:active {
+    transform: scale(0.95);
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* استایل برای موبایل */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: 2;
+    }
+    
+    .main-content {
+        order: 1;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .contact-info li {
+        direction: ltr;
+        justify-content: flex-start;
+    }
+    
+    .header-top {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    .language-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+/* استایل برای تبلت */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+/* استایل تم تاریک */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-theme .container {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-theme .sidebar {
+    background-color: #3d3d3d;
+}
+
+.dark-theme h2 {
+    color: #3498db;
+}
+
+.dark-theme .experience-item:hover,
+.dark-theme .education-item:hover {
+    background-color: #3d3d3d;
+}
+
+.dark-theme .skills-list li {
+    background-color: #4d4d4d;
+    color: #e0e0e0;
+}
+
+.dark-theme .skills-list li:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.dark-theme .contact-info i {
+    color: #3498db;
+}
+
+.dark-theme .name-link:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark-theme .language-btn {
+    background: rgba(255, 255, 255, 0.85);
+    color: #2c3e50;
+}
+
+.dark-theme .language-btn:hover {
+    background: white;
+}
