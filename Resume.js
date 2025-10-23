@@ -41,12 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (languageSwitch) {
         languageSwitch.addEventListener('click', function() {
             // اینجا آدرس صفحه انگلیسی را قرار دهید
-            window.open('./resume-en.html', '_self');
+            window.open('./ResumeEn.html', '_self');
         });
     }
     
-    // کنسول لاگ برای تأیید بارگذاری
-    console.log('رزومه امیرحسین کریمی با موفقیت بارگذاری شد!');
+    
 });
 
 // تابع برای تغییر تم
@@ -68,4 +67,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
     }
+
 });
